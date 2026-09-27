@@ -1,0 +1,25 @@
+# Automatic Plant Watering System in Python
+
+print("===== AUTOMATIC PLANT WATERING SYSTEM =====")
+
+while True:
+    moisture = float(input("\nEnter soil moisture level (%): "))
+
+    if moisture < 30:
+        print("Soil is DRY.")
+        print("Water Pump: ON")
+        print("Plant is being watered...")
+
+    elif moisture >= 30 and moisture < 60:
+        print("Soil moisture is NORMAL.")
+        print("Water Pump: OFF")
+
+    else:
+        print("Soil is WET.")
+        print("Water Pump: OFF")
+
+    choice = input("\nDo you want to check again? (yes/no): ")
+
+    if choice.lower() != "yes":
+        print("Automatic Plant Watering System Closed.")
+        break
